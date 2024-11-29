@@ -50,5 +50,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.label.text = "Row: \(indexPath.row + 1)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print("Will display cell at row: \(indexPath.row)")
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print("Did end displaying cell at row: \(indexPath.row)")
+    }
 }
 
