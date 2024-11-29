@@ -22,6 +22,11 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = ""
+    }
+    
     func setupLabel() {
         contentView.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
