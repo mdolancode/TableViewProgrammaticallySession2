@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func registerCell() {
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
 }
 
@@ -46,7 +46,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
         cell.label.text = "Row: \(indexPath.row + 1)"
         return cell
     }
