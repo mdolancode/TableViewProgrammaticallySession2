@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     var tableView = UITableView()
     var visibleCellCount = 0
-    var visibleCellsLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +19,7 @@ class ViewController: UIViewController {
         tableViewConstraints()
         registerCell()
         
-        setupVisibleCellsLabel()
-        visibleCellsLabelConstraints()
+        updateCellCountInNavigationTitle()
     }
     
     func setupTableView() {
@@ -44,21 +42,8 @@ class ViewController: UIViewController {
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
     
-    func setupVisibleCellsLabel() {
-        view.addSubview(visibleCellsLabel)
-        visibleCellsLabel.text = "Visible Cells: \(visibleCellsLabel)"
-        visibleCellsLabel.textAlignment = .center
-        visibleCellsLabel.backgroundColor = .white
-    }
-    
-    func visibleCellsLabelConstraints() {
-        visibleCellsLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            visibleCellsLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            visibleCellsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            visibleCellsLabel.widthAnchor.constraint(equalToConstant: 200),
-            visibleCellsLabel.heightAnchor.constraint(equalToConstant: 40)
-        ])
+    func updateCellCountInNavigationTitle() {
+        title = "Visible Cells: \(visibleCellCount)"
     }
 }
 
@@ -77,7 +62,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         visibleCellCount += 1
         print("Will display cell at row: \(indexPath.row)")
         
-        visibleCellsLabel.text = "Visible Cells: \(visibleCellCount)"
+        updateCellCountInNavigationTitle()
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -87,7 +72,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         print("Did end displaying cell at row: \(indexPath.row)")
         
-        visibleCellsLabel.text = "Visible Cells: \(visibleCellCount)"
+        updateCellCountInNavigationTitle()
     }
 }
 
