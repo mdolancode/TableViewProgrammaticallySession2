@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     let tableView = UITableView()
     var visibleCellCount = 0
+    var dataArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
         setupTableView()
         tableViewConstraints()
         registerCell()
+        
+        loadData()
         
         updateCellCountInNavigationTitle()
     }
@@ -42,6 +45,19 @@ class ViewController: UIViewController {
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
     
+    func loadData() {
+        DispatchQueue.global(qos: .background).async {
+            let newData = (1...100).map { "Row \($0)" }
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.dataArray = newData
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
+    
     func updateCellCountInNavigationTitle() {
         title = "Visible Cells: \(visibleCellCount)"
     }
@@ -49,12 +65,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
-        cell.label.text = "Row: \(indexPath.row + 1)"
+        cell.label.text = dataArray[indexPath.row]
         return cell
     }
     
