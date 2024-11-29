@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var tableView = UITableView()
+    let tableView = UITableView()
     var visibleCellCount = 0
 
     override func viewDidLoad() {

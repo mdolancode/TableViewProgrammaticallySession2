@@ -8,7 +8,8 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    var label = UILabel()
+    
+    let label = UILabel()
     
     static let identifier = "CustomTableViewCell"
     
