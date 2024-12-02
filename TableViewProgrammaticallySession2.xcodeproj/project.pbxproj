@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C55242D32CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55242D22CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.swift */; };
 		C5A6DA202CF9684A008860C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6DA1F2CF9684A008860C5 /* AppDelegate.swift */; };
 		C5A6DA222CF9684A008860C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6DA212CF9684A008860C5 /* SceneDelegate.swift */; };
 		C5A6DA242CF9684A008860C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6DA232CF9684A008860C5 /* ViewController.swift */; };
@@ -15,7 +16,19 @@
 		C5A6DA342CF96EA2008860C5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6DA332CF96EA2008860C5 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C55242D42CFAA6280097F831 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A6DA142CF9684A008860C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5A6DA1B2CF9684A008860C5;
+			remoteInfo = TableViewProgrammaticallySession2;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C55242D02CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewProgrammaticallySession2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55242D22CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProgrammaticallySession2Tests.swift; sourceTree = "<group>"; };
 		C5A6DA1C2CF9684A008860C5 /* TableViewProgrammaticallySession2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewProgrammaticallySession2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A6DA1F2CF9684A008860C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5A6DA212CF9684A008860C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +40,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C55242CD2CFAA6280097F831 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5A6DA192CF9684A008860C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C55242D12CFAA6280097F831 /* TableViewProgrammaticallySession2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C55242D22CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.swift */,
+			);
+			path = TableViewProgrammaticallySession2Tests;
+			sourceTree = "<group>";
+		};
 		C5A6DA132CF9684A008860C5 = {
 			isa = PBXGroup;
 			children = (
 				C5A6DA1E2CF9684A008860C5 /* TableViewProgrammaticallySession2 */,
+				C55242D12CFAA6280097F831 /* TableViewProgrammaticallySession2Tests */,
 				C5A6DA1D2CF9684A008860C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				C5A6DA1C2CF9684A008860C5 /* TableViewProgrammaticallySession2.app */,
+				C55242D02CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +100,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C55242CF2CFAA6280097F831 /* TableViewProgrammaticallySession2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55242D82CFAA6280097F831 /* Build configuration list for PBXNativeTarget "TableViewProgrammaticallySession2Tests" */;
+			buildPhases = (
+				C55242CC2CFAA6280097F831 /* Sources */,
+				C55242CD2CFAA6280097F831 /* Frameworks */,
+				C55242CE2CFAA6280097F831 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C55242D52CFAA6280097F831 /* PBXTargetDependency */,
+			);
+			name = TableViewProgrammaticallySession2Tests;
+			productName = TableViewProgrammaticallySession2Tests;
+			productReference = C55242D02CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C5A6DA1B2CF9684A008860C5 /* TableViewProgrammaticallySession2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5A6DA302CF9684C008860C5 /* Build configuration list for PBXNativeTarget "TableViewProgrammaticallySession2" */;
@@ -97,6 +145,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					C55242CF2CFAA6280097F831 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C5A6DA1B2CF9684A008860C5;
+					};
 					C5A6DA1B2CF9684A008860C5 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -116,11 +168,19 @@
 			projectRoot = "";
 			targets = (
 				C5A6DA1B2CF9684A008860C5 /* TableViewProgrammaticallySession2 */,
+				C55242CF2CFAA6280097F831 /* TableViewProgrammaticallySession2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C55242CE2CFAA6280097F831 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5A6DA1A2CF9684A008860C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +193,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C55242CC2CFAA6280097F831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55242D32CFAA6280097F831 /* TableViewProgrammaticallySession2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5A6DA182CF9684A008860C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +214,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C55242D52CFAA6280097F831 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5A6DA1B2CF9684A008860C5 /* TableViewProgrammaticallySession2 */;
+			targetProxy = C55242D42CFAA6280097F831 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C5A6DA2A2CF9684C008860C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -158,6 +234,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C55242D62CFAA6280097F831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CDGW4297F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewdolan.TableViewProgrammaticallySession2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewProgrammaticallySession2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TableViewProgrammaticallySession2";
+			};
+			name = Debug;
+		};
+		C55242D72CFAA6280097F831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5CDGW4297F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewdolan.TableViewProgrammaticallySession2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewProgrammaticallySession2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TableViewProgrammaticallySession2";
+			};
+			name = Release;
+		};
 		C5A6DA2E2CF9684C008860C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -329,6 +441,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C55242D82CFAA6280097F831 /* Build configuration list for PBXNativeTarget "TableViewProgrammaticallySession2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55242D62CFAA6280097F831 /* Debug */,
+				C55242D72CFAA6280097F831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5A6DA172CF9684A008860C5 /* Build configuration list for PBXProject "TableViewProgrammaticallySession2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
