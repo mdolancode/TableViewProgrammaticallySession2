@@ -110,6 +110,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     // Called when a cell is no longer visible on the screen
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // Ensure the count does not go below zero
         if visibleCellCount > 0 {
             visibleCellCount -= 1
         }
